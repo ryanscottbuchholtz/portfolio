@@ -1,10 +1,12 @@
 var landingImageTop = 0;
-var journeyDiv = 0;
+var journeyDivTop = 0;
+var workDivTop = 0;
 
 
 $(document).ready(function(){
   landingImageTop = parseInt($('#landing-image').css('top'));
-  journeyDiv = $('#journey').offset().top; 
+  journeyDivTop = $('#journey').offset().top;
+  workDivTop = $('#work').offset().top; 
   
   $(window).scroll( function() {
     var windowTop = $(window).scrollTop();
@@ -15,15 +17,29 @@ $(document).ready(function(){
       $('#landing-image').css('top', 75 + 'px');
     };
 
-    var topPosition = (journeyDiv - windowTop - 75);
-    var bottomPosition = (journeyDiv - windowTop - 75 - $('#paths').height());
+    var journeyDivComparedToTopOfScreen = (journeyDivTop - windowTop);
+    var workDivComparedToTopOfScreen = (workDivTop - windowTop);
 
-    if(topPosition < 0 ) {
+    if(journeyDivComparedToTopOfScreen < 0 ) {
       $('#journey').css({
-        opacity: ($('#paths').height() - (75 - (journeyDiv - windowTop)))/$('#paths').height()
+        opacity: ($('#journey').height() + (journeyDivTop - windowTop))/$('#journey').height()
+      });
+    } else {
+      $('#journey').css('opacity', 1);
+    };
+
+    if(workDivComparedToTopOfScreen < $('#journey').height()) {
+      $('#work').css({
+        opacity: $('#work').height()/($('#work').height() - (75 - (workDivTop - windowTop)))
       });
     }
 
-    console.log(scrollTop + ' ' + windowTop);
+    if(workDivComparedToTopOfScreen < 0 ) {
+      $('#work').css({
+        opacity: ($('#work').height() + (workDivTop - windowTop))/$('#work').height()
+      });
+    } 
+
   });
+
 })

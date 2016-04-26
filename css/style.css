@@ -144,10 +144,9 @@ nav li {
   width: 100%;
   color: #3E606F;
   min-height: 100vh;
-  position: relative;
 }
 
-#speciality {
+#journey h1 {
   width: 100%;
   padding: 25px 0;
   text-align: center;
@@ -206,9 +205,15 @@ nav li {
 
 /* Next Div */
 
-#next-div {
+#work {
   width: 100%;
   min-height: 100vh;
+  background-color: #3E606F;
+}
+
+#the-next-div {
+  width: 100%;
+  height: 100vh;
 }
 
 
@@ -245,6 +250,13 @@ nav li {
 
   #image-text {
     font-size: 1.25em;
+  }
+
+  #journey {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 
   #paths {
