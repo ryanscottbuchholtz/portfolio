@@ -27,6 +27,7 @@ a {
 .header-wrap {
   width: 100%;
   position: relative;
+  z-index: 9999;
 
 }
 
@@ -247,6 +248,7 @@ nav li {
 }
 
 #portfolio {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -257,7 +259,11 @@ nav li {
   height: 850px;
   padding: 5px;
   margin-bottom: 30px;
-  border: 1px solid lightgrey;
+  z-index: 0;
+}
+
+.portfolio:hover {
+  opacity: .4;
 }
 
 #armchair-travel,
@@ -311,6 +317,13 @@ nav li {
   height: 85%;
   box-shadow: 0 15px 20px -12px rgba(0,0,0,0.8);
 }
+
+/* #test {
+  width: 80%;
+  height: 850px;
+  background-color: orange;
+  position: absolute;
+} */
 
 
 /* Media Queries */
@@ -408,7 +421,6 @@ nav li {
     width: 45%;
     margin: 0 auto;
     margin-bottom: 25px;
-    box-shadow: 0 15px 20px -12px rgba(0,0,0,0.8);
   }
 
   #portfolio {
