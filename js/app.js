@@ -1,8 +1,14 @@
+var landingImageTop = 0;
+
 $(document).ready(function(){
+  landingImageTop = parseInt($('#landing-image').css('top'));
+  bioPicLeft = parseInt($('#photo-ryan').css('left'));
   
   $(window).scroll( function() {
     var windowTop = $(window).scrollTop();
-    $('#landing-image').css('background-position', '0px ' + (-windowTop/6) + 'px');
-    console.log(windowTop);
+    var scrollTop = landingImageTop + (windowTop/8);
+    $('#landing-image').css('top', scrollTop + 'px');
+
+
   });
 })

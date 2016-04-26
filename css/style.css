@@ -3,7 +3,7 @@
 * {
   box-sizing: border-box;
   list-style: none;
-/*   border: 1px solid orange; */
+  /* border: 1px solid orange; */
 }
 
 .body-wrap {
@@ -17,6 +17,10 @@ h1 {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 /* Header */
 
@@ -70,18 +74,53 @@ nav li {
 
 #landing-image {
   width: 100%;
-  height: 100vh;
-  background: url('../assets/lynDyjGSR9eR57ouPIEE_IMG_woods.jpg') no-repeat;
+  height: 120vh;
+  background: url('../assets/lynDyjGSR9eR57ouPIEE_IMG_woods.jpg') no-repeat center;
   background-size: cover;
   opacity: 1;
   position: fixed;
+  top: -100px;
   z-index: -10;
 }
 
-#image-text,
-#image-text-background {
-  display: none;
-}
+  #image-text-background {
+    display: block;
+    position: fixed;
+    bottom: 40vh;
+    left: 0px;
+    width: 100%;
+    height: 300px;
+    z-index: -5;
+    opacity: .8;
+    background-color: darkgrey;
+    box-shadow: 0 15px 20px -12px rgba(0,0,0,0.8);
+  }
+
+  #image-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    position: fixed;
+    bottom: 40vh;
+    right: 0px;
+    padding: 25px;
+    padding-top: 50px;
+    font-size: 1.2em;
+    line-height: 2.0em;
+    font-family: 'Nothing You Could Do', cursive;
+    color: #f2f2f2;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: -1;
+  }
+
+  #author {
+    align-self: flex-end;
+    margin-right: 5%;
+  }
 
 .fa-chevron-down {
   position: fixed;
@@ -99,15 +138,13 @@ nav li {
 }
 
 #work {
-  background-color: #f2f2f2;
+  background-color: white;
   z-index: 1000;
-  height: 600px;
+  width: 100%;
 }
 
 #speciality {
   width: 100%;
-  border-top: 1px solid lightgrey;
-  border-bottom: 1px solid lightgrey;
   padding: 25px 0;
   text-align: center;
   margin-bottom: 0;
@@ -115,13 +152,12 @@ nav li {
 
 #paths {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .path {
-  width: 33.333%;
-  height: 500px;
-  border: 1px solid lightgrey;
+  width: 100%;
+  margin-top: 20px;
 }
 
 #responsive,
@@ -144,6 +180,7 @@ nav li {
 .js {
   padding: 25px;
 }
+
 #responsive-headline,
 #html-css-headline,
 #js-headline {
@@ -161,49 +198,163 @@ nav li {
   text-align: justify;
 }
 
+/* About */
+
+#about-me {
+  width: 80%;
+  margin: 0 auto;
+  height: 1800px;
+  background-color: orange;
+  margin-top: 50px;
+  padding-top: 25px;
+}
+
+#photo-and-bio {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+#photo-ryan {
+  background: url('../assets/Ryan_Launch_Academy.jpg') center no-repeat;
+  background-size: cover;
+  height: 30%;
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 0 15px 20px -12px rgba(0,0,0,0.8);
+}
+
+#bio {
+  width: 100%;
+  padding: 0 25px;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+}
+
+/* Projects */
+
+#projects {
+  background-color: white;
+  width: 100%;
+}
+
+#projects h1 {
+  text-align: center;
+  padding: 25px 0;
+}
+
+#portfolio {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio {
+  width: 80%;
+  margin: 0 auto;
+  height: 850px;
+  padding: 5px;
+  margin-bottom: 30px;
+  border: 1px solid lightgrey;
+}
+
+#armchair-travel,
+#youtube-search,
+#anglo-quiz,
+#hot-or-cold {
+  display: flex;
+  flex-direction: column;
+}
+
+#armchair-headline,
+#youtube-search-headline,
+#anglo-quiz-headline,
+#hot-or-cold-headline {
+  text-align: center;
+}
+
+#armchair-text,
+#youtube-search-text,
+#anglo-quiz-text,
+#hot-or-cold-text {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 15px;
+  text-align: justify;
+  height: 15%;
+}
+
+#armchair-image {
+  background: url('../assets/armchair.png') top left;
+}
+
+#youtube-search-image {
+  background: url('../assets/tubesearch.png') top left;
+}
+
+#anglo-quiz-image {
+  background: url('../assets/anglo.png') top center;
+}
+
+#hot-or-cold-image {
+  background: url('../assets/hotorcold.png') top center;
+}
+
+#armchair-image,
+#youtube-search-image,
+#anglo-quiz-image,
+#hot-or-cold-image {
+  background-size: cover;
+  width: 100%;
+  height: 85%;
+  box-shadow: 0 15px 20px -12px rgba(0,0,0,0.8);
+}
+
 
 /* Media Queries */
 
 @media (min-width: 626px) {
 
-  #image-text-background {
-    display: block;
-    position: fixed;
-    bottom: 40vh;
-    left: 0px;
-    width: 100%;
+  #image-text-background,
+  #image-text {
     height: 175px;
-    z-index: -5;
-    opacity: .8;
-    background-color: darkgrey;
-    box-shadow: 0 15px 20px -12px rgba(0,0,0,0.8);
   }
 
-  #image-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: 175px;
-    position: fixed;
-    bottom: 40vh;
-    right: 0px;
-    padding: 25px;
-    padding-top: 50px;
-    font-size: 1.2em;
-    line-height: 2.0em;
-    font-family: 'Nothing You Could Do', cursive;
-    color: #f2f2f2;
-    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    z-index: -1;
-  }
 
   #author {
     align-self: flex-end;
     margin-right: 5%;
   }
+
+  .path {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+
+  #photo-ryan {
+    height: 40%;
+    width: 80%;
+  }
+
+  #bio {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #about-me {
+    height: 1200px;
+  }
+
+  #armchair-text,
+  #youtube-search-text,
+  #anglo-quiz-text,
+  #hot-or-cold-text {
+    font-size: 1.3em;
+}
+
 
 }
 
@@ -220,6 +371,50 @@ nav li {
   #author {
     display: block;
     text-align: right;
+  }
+
+  #paths {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .path {
+    width: 33.333%;
+    height: 450px;
+  }
+
+  #photo-and-bio {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #about-me {
+    height: 750px;
+    padding-top: 0;
+  }
+
+  #photo-ryan {
+    width: 32%;
+    height: 80%;
+  }
+
+  #bio {
+    width: 62%;
+    height: 80%;
+  }
+
+  .portfolio {
+    width: 45%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    box-shadow: 0 15px 20px -12px rgba(0,0,0,0.8);
+  }
+
+  #portfolio {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
