@@ -1,12 +1,14 @@
 var landingImageTop = 0;
 var journeyDivTop = 0;
 var workDivTop = 0;
+var photoDivTop
 
 
 $(document).ready(function(){
   landingImageTop = parseInt($('#landing-image').css('top'));
   journeyDivTop = $('#journey').offset().top;
   workDivTop = $('#work').offset().top; 
+  photoDivTop = $('#photo-div').offset().top;
   
   $(window).scroll( function() {
     var windowTop = $(window).scrollTop();
@@ -19,6 +21,7 @@ $(document).ready(function(){
 
     var journeyDivComparedToTopOfScreen = (journeyDivTop - windowTop);
     var workDivComparedToTopOfScreen = (workDivTop - windowTop);
+    var photoDivComparedToTopOfScreen = (photoDivTop - windowTop);
 
     if(journeyDivComparedToTopOfScreen < 0 ) {
       $('#journey').css({
@@ -34,12 +37,19 @@ $(document).ready(function(){
       });
     }
 
-    if(workDivComparedToTopOfScreen < 0 ) {
-      $('#work').css({
-        opacity: ($('#work').height() + (workDivTop - windowTop))/$('#work').height()
+    if(photoDivComparedToTopOfScreen < $('#photo-div').height()) {
+      $('#photo-div').css({
+        opacity: $('#photo-div').height()/($('#photo-div').height() - (75 - (photoDivTop - windowTop)))
       });
-    } 
+    }
+
+    // if(workDivComparedToTopOfScreen < 0 ) {
+    //   $('#work').css({
+    //     opacity: ($('#work').height() + (workDivTop - windowTop))/$('#work').height()
+    //   });
+    // } 
 
   });
+    
 
 })

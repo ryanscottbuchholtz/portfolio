@@ -3,6 +3,8 @@
 * {
   box-sizing: border-box;
   list-style: none;
+  min-height: 0;
+  min-width: 0;
   /* border: 1px solid orange; */
 }
 
@@ -16,6 +18,13 @@
 h1 {
   margin: 0;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
 
 /* Header */
 
@@ -90,7 +99,7 @@ nav li {
     bottom: 40vh;
     left: 0px;
     width: 100%;
-    height: 300px;
+    height: 400px;
     z-index: -5;
     opacity: .8;
     background-color: darkgrey;
@@ -103,7 +112,7 @@ nav li {
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    height: 300px;
+    height: 400px;
     position: fixed;
     bottom: 40vh;
     right: 0px;
@@ -203,15 +212,105 @@ nav li {
   height: 50%;
 }
 
-/* Next Div */
+/* Work Portolio */
+
+#work h1 {
+  color: #FCFFF5;
+  padding-top: 25px;
+  text-align: center;
+}
 
 #work {
   width: 100%;
   min-height: 100vh;
   background-color: #3E606F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-#the-next-div {
+.front-side,
+.back-side {
+  width: 375px;
+  height: 275px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.front-side {
+  box-shadow: 0 15px 20px -12px rgba(0,0,0,0.8);
+  background-color: #FCFFF5;
+}
+
+.back-side {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  color: orange;
+}
+
+.back-side a {
+  padding: 25px;
+}
+
+.back-side p {
+  width: 100%;
+  margin-top: -25px;
+}
+
+.front-side img {
+  width: 350px;
+  height: 250px;
+}
+
+.webpage-example {
+  margin: 25px auto;
+  position: relative;
+}
+
+.webpage-example p {
+  text-align: right;
+  color: #f2f2f2;
+}
+
+
+.webpage-example:hover .front-side{
+  opacity: .4;
+}
+
+.webpage-example:hover .back-side{
+  z-index: 1;
+}
+
+a:hover {
+  font-size: 2em;
+}
+
+/* Photography */
+
+
+#photo-div {
+  width: 100%;
+  height: 100vh;
+  background-color: #FCFFF5;
+}
+
+#photo-div h1 {
+  padding-top: 25px;
+  text-align: center;
+  color: #3E606F;
+}
+
+
+/* Contact */
+
+#next-div {
   width: 100%;
   height: 100vh;
 }
@@ -223,7 +322,7 @@ nav li {
 
   #image-text-background,
   #image-text {
-    height: 175px;
+    height: 250px;
   }
   
   .nav-head {
@@ -240,6 +339,23 @@ nav li {
     margin: 0 auto;
     margin-top: 25px;
   }
+
+  .front-side,
+  .back-side {
+    width: 475px;
+    height: 375px;
+    margin: 35px;
+  }
+
+  .front-side img {
+    width: 450px;
+    height: 350px;
+  }
+
+  .webpage-example p {
+    padding-right: 45px;
+  }
+
 }
 
 
@@ -250,6 +366,11 @@ nav li {
 
   #image-text {
     font-size: 1.25em;
+  }
+
+  #image-text-background,
+  #image-text {
+    height: 175px;
   }
 
   #journey {
@@ -269,6 +390,16 @@ nav li {
     width: 33.333%;
     height: 450px;
   }
+
+  #work {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #work h1 {
+    width: 100%;
+  }
+
 }
 
 @media (min-width: 2069px) {
