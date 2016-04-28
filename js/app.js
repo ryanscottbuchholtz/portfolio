@@ -10,6 +10,7 @@ $(document).ready(function(){
   scrollTop('#work-link', 75, 1600);
   scrollTop('#photo-link', 75, 1600);
   scrollTop('#about-me-link', 0, 1600);
+
   $('#contact-link').on('click', function(event) {
     event.preventDefault();
     $("body, html").animate({
@@ -17,13 +18,13 @@ $(document).ready(function(){
     }, 1200);
     $('#social-media-background').show();
     $('#social-media').show().addClass('animated').addClass('zoomIn');
-  })
+  });
 
   $('.social-media-icon').on('mouseenter', function() {
     $(this).addClass('animated').addClass('rubberBand')
   }).on('mouseleave', function() {
     $(this).removeClass('animated').removeClass('rubberBand');
-  })
+  });
 
 
 
