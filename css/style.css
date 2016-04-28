@@ -47,7 +47,9 @@ nav {
   /* box-shadow: 0 15px 20px -12px rgba(0,0,0,0.8); */
 }
 
-.nav-head {
+#work-link,
+#photo-link,
+#about-me-link {
   display: none;
 }
 
@@ -423,7 +425,9 @@ nav li {
     height: 250px;
   }
   
-  .nav-head {
+  #work-link,
+  #photo-link,
+  #about-me-link {
     display: block;
   }
 
