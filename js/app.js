@@ -47,12 +47,14 @@ $(document).ready(function(){
       $('#image-text').fadeOut('slow');
       $('#image-text-background').fadeOut('slow');
       $('.fa-chevron-up').fadeIn('slow');
+      $('#about-me').fadeIn('slow');
 
     } else {
       $('.fa-chevron-down').fadeIn('slow');
       $('#image-text').fadeIn('slow');
       $('#image-text-background').fadeIn('slow');
       $('.fa-chevron-up').fadeOut('slow');
+      $('#about-me').fadeOut('slow');
 
     }
 

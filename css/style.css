@@ -143,7 +143,7 @@ nav li {
   .fa-chevron-up {
     position: fixed;
     left: 46%;
-    top: 10%;
+    top: 7%;
     color: orange;
     z-index: -1;
     display: none;
@@ -297,7 +297,7 @@ nav li {
   z-index: 1;
 }
 
-a:hover {
+.backside a:hover {
   font-size: 2em;
 }
 
@@ -339,6 +339,79 @@ a:hover {
 #next-div {
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#about-me {
+  margin-top: 175px;
+  position: relative;
+}
+
+#photo-ryan {
+  background: url('../assets/Ryan_Launch_Academy.jpg') no-repeat;
+  background-size: contain;
+  width: 350px;
+  height: 250px;
+  margin: 0 auto;
+  box-shadow: 0 15px 20px -12px rgba(0,0,0,0.8);
+}
+
+#photo-and-bio h3 {
+  display: none;
+}
+
+#bio {
+  background-color: #FCFFF5;
+  width: 90%;
+  margin: 0 auto;
+  padding: 25px;
+  text-align: justify;
+}
+
+#social-media,
+#social-media-background {
+  width: 85%;
+  height: 50px;
+  margin-top: 15px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#social-media-background {
+  background-color: orange;
+  opacity: .6;
+}
+
+#social-media {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.fa-facebook:hover {
+  color: #3B5998;
+}
+
+.fa-twitter:hover {
+  color: #00ACED;
+}
+
+.fa-linkedin:hover {
+  color: #007BB6;
+}
+
+.fa-google-plus:hover {
+  color: #DD4B39;
+}
+
+.fa-github:hover {
+  color: #4183C4;
 }
 
 
@@ -381,7 +454,6 @@ a:hover {
   .webpage-example p {
     padding-right: 45px;
   }
-
 
 }
 
@@ -431,7 +503,43 @@ a:hover {
   #vegas,
   #yellowstone {
     width: auto;
+  }
 
+  #photo-and-bio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  #photo-and-bio h3 {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    font-size: 3em;
+    display: inline;
+  }
+
+  #about-me {
+    margin-top: 0;
+    background-color: #FCFFF5;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 25px;
+  }
+
+  #photo-ryan {
+    width: 550px;
+    height: 375px;
+  }
+
+  #bio {
+    width: 55%;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
 }
