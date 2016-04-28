@@ -43,7 +43,6 @@ $(document).ready(function(){
     }
 
     if((windowTop + 75) > photoDivTop + $('#photo-div').height()) {
-      console.log('Top reached');
       $('.fa-chevron-down').fadeOut('slow');
       $('#image-text').fadeOut('slow');
       $('#image-text-background').fadeOut('slow');
