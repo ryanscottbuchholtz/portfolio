@@ -430,14 +430,8 @@ a:hover {
   #italy,
   #vegas,
   #yellowstone {
-    width: 30%;
-    margin: 25px;
-  }
+    width: auto;
 
-  #photo-div {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
   }
 
 }
