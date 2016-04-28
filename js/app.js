@@ -1,8 +1,7 @@
 var landingImageTop = 0;
 var journeyDivTop = 0;
 var workDivTop = 0;
-var photoDivTop
-
+var photoDivTop = 0;
 
 $(document).ready(function(){
   landingImageTop = parseInt($('#landing-image').css('top'));
@@ -43,13 +42,34 @@ $(document).ready(function(){
       });
     }
 
+    if((windowTop + 75) > photoDivTop + $('#photo-div').height()) {
+      console.log('Top reached');
+      $('.fa-chevron-down').fadeOut('slow');
+      $('#image-text').fadeOut('slow');
+      $('#image-text-background').fadeOut('slow');
+      $('.fa-chevron-up').fadeIn('slow');
+
+    } else {
+      $('.fa-chevron-down').fadeIn('slow');
+      $('#image-text').fadeIn('slow');
+      $('#image-text-background').fadeIn('slow');
+      $('.fa-chevron-up').fadeOut('slow');
+
+    }
+
+    // height = $('#photo-div').height()
+
+    // console.log(height);
+
     // if(workDivComparedToTopOfScreen < 0 ) {
     //   $('#work').css({
     //     opacity: ($('#work').height() + (workDivTop - windowTop))/$('#work').height()
     //   });
     // } 
 
+
   });
-    
+   
+
 
 })
