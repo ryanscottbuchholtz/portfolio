@@ -336,7 +336,7 @@ nav li {
 
 /* Contact */
 
-#next-div {
+#bio-div {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -413,7 +413,6 @@ nav li {
 .fa-github:hover {
   color: #4183C4;
 }
-
 
 /* Media Queries */
 

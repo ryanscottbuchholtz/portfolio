@@ -4,6 +4,29 @@ var workDivTop = 0;
 var photoDivTop = 0;
 
 $(document).ready(function(){
+
+  hideSocialMedia();
+
+  scrollTop('#work-link', 75, 1600);
+  scrollTop('#photo-link', 75, 1600);
+  scrollTop('#about-me-link', 0, 1600);
+  $('#contact-link').on('click', function(event) {
+    event.preventDefault();
+    $("body, html").animate({
+      scrollTop: $($(this).attr('href')).offset().top
+    }, 1200);
+    $('#social-media-background').show();
+    $('#social-media').show().addClass('animated').addClass('zoomIn');
+  })
+
+  $('.social-media-icon').on('mouseenter', function() {
+    $(this).addClass('animated').addClass('rubberBand')
+  }).on('mouseleave', function() {
+    $(this).removeClass('animated').removeClass('rubberBand');
+  })
+
+
+
   landingImageTop = parseInt($('#landing-image').css('top'));
   journeyDivTop = $('#journey').offset().top;
   workDivTop = $('#work').offset().top; 
@@ -55,22 +78,26 @@ $(document).ready(function(){
       $('#image-text-background').fadeIn('slow');
       $('.fa-chevron-up').fadeOut('slow');
       $('#about-me').fadeOut('slow');
-
     }
-
-    // height = $('#photo-div').height()
-
-    // console.log(height);
-
-    // if(workDivComparedToTopOfScreen < 0 ) {
-    //   $('#work').css({
-    //     opacity: ($('#work').height() + (workDivTop - windowTop))/$('#work').height()
-    //   });
-    // } 
-
-
   });
-   
-
-
 })
+
+function scrollTop(linkID, topMargin, milliseconds) {
+  $(linkID).on('click', function(event) {
+    event.preventDefault();
+
+    $("body, html").animate({
+      scrollTop: $($(this).attr('href')).offset().top - topMargin
+    }, milliseconds);
+    hideSocialMedia();
+  });
+
+}
+
+function hideSocialMedia() {
+  $('#social-media').hide();
+  $('#social-media-background').hide();
+}
+
+
+
