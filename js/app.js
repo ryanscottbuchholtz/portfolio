@@ -26,6 +26,13 @@ $(document).ready(function(){
     $(this).removeClass('animated').removeClass('rubberBand');
   });
 
+  $('#home-link').on('click', function(event) {
+    event.preventDefault();
+    $('html, body').animate({
+      scrollTop: 0
+    }, 2400);
+  });
+
 
 
   landingImageTop = parseInt($('#landing-image').css('top'));
