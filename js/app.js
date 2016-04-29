@@ -6,6 +6,12 @@ var aboutDivTop = 0;
 
 $(document).ready(function(){
 
+  landingImageTop = parseInt($('#landing-image').css('top'));
+  journeyDivTop = $('#journey').offset().top;
+  workDivTop = $('#work').offset().top; 
+  photoDivTop = $('#photo-div').offset().top;
+  aboutDivTop = $('#about').offset().top;
+
   scrollTop('#study-link', 75, 1600);
   scrollTop('#work-link', 75, 1600);
   scrollTop('#photo-link', 75, 1600);
@@ -30,18 +36,11 @@ $(document).ready(function(){
     }, 2400);
   });
 
-  landingImageTop = parseInt($('#landing-image').css('top'));
-  journeyDivTop = $('#journey').offset().top;
-  workDivTop = $('#work').offset().top; 
-  photoDivTop = $('#photo-div').offset().top;
-  aboutDivTop = $('#about').offset().top;
-
   if($(window).width() < 626) {
     $(window).scroll( function() {
       var windowTop = $(window).scrollTop();
 
       if(windowTop >= (journeyDivTop - 75)) {
-        console.log('time to fade');
         $('.header-wrap').fadeOut('slow');
         $('#social-media-float').fadeIn('slow');
       } else {

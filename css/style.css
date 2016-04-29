@@ -176,26 +176,13 @@ nav li {
 
 .path {
   width: 100%;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 25px;
-}
-
-#responsive {
-  position: relative;
-}
-
-#overlay {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  color: orange;
-  z-index: 99999;
+  height: 375px;
+  min-height: 33vh;
 }
 
 .icons {
