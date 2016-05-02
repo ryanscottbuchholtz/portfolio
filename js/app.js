@@ -66,7 +66,7 @@ $(document).ready(function(){
 
       if(windowTop >= (journeyDivTop - 75)) {
         $('#social-media-float').fadeIn('slow');
-        $('#social-media-float').css('top', windowTop + 150);
+        // $('#social-media-float').css('top', windowTop + 150);
       } else {
         $('#social-media-float').fadeOut('slow')
       };
